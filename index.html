@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 5 Template Strings</title>
+</head>
+<body>
+    <h1 id="lista">Proyecto 5</h1>
+    <p>Este es el proyecto 5</p>
+
+    <script>
+        let lista = document.getElementById('lista');
+        let texto = 'Hola mi nombre es Ximena y acabo de cumplir 19';
+        console.log(texto);
+//Otra forma de manejar cadena o strings
+        console.log(`Otra forma de manejar cadenas strings`);
+
+        let text = `Cadena multilinea
+        brown fox
+        jumps over
+        the lazy dog`;
+        console.log(text);
+        let a = 5;
+        let b = 10;
+        //El signo de pesos es para hacer referencia a la variable
+        console.log(`El resultado de la suma de ${a} y ${b} es ${a+b}
+        Multiplica ${a} por ${b} es ${a*b}
+
+        Divide ${a} entre ${b} es ${a/b}
+
+        Alt + 96 = apostrofe invertido (backtick)
+        `);
+
+        let persona = "Mike";
+        let edad = 16;
+
+        function miFunction(cadenas, personaX, edadExp){
+            let resultado = "";
+            console.log(cadenas);
+            console.log(cadenas[2]);
+            //Operador ternario 1
+           // edadExp < 18 ? resultado = 'menor de edad' : resultado = 'mayor de edad';
+            //Operador ternario 2
+            resultado = edadExp < 18 ? 'menor de edad' : 'mayor de edad';
+                    }
+                    
+                    //console.log(miFunction('Hola', 'Pepe', 18));
+
+                    let resultado2 = miFunction`Hola buenos dias ${persona} tienes ${edad}`;
+                    console.log(resultado2);
+
+                    let titulo = "Ganadores Oscares";
+                    let cantantes = ["Billie Eilish", "Lady Gaga", "Adele"];
+                    let cadenaHTML = `<h1>${titulo}</h1>`
+
+                    cadenaHTML += `<ul>`;
+
+                    for (let cantante of cantantes){
+                        cadenaHTML += `<li>${cantante}</li>`;
+                    }
+                    cadenaHTML += `</ul>`;
+
+                    lista.innerHTML = cadenaHTML;
+                </script>
+            </body>
+            </html>
+    </script>
+</body>
+</html>
